@@ -27,6 +27,12 @@
     ]
   },
   "projects": {
+    "libterminal": {
+      "tags": []
+    },
+    "react-xterm": {
+      "tags": []
+    },
     "terminal": {
       "tags": []
     },

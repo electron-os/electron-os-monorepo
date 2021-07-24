@@ -1,6 +1,78 @@
 {
   "version": 2,
   "projects": {
+    "libterminal": {
+      "root": "libs/libterminal",
+      "sourceRoot": "libs/libterminal/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/libterminal/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/libterminal"],
+          "options": {
+            "jestConfig": "libs/libterminal/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/libterminal",
+            "tsConfig": "libs/libterminal/tsconfig.lib.json",
+            "packageJson": "libs/libterminal/package.json",
+            "main": "libs/libterminal/src/index.ts",
+            "assets": ["libs/libterminal/*.md"]
+          }
+        }
+      }
+    },
+    "react-xterm": {
+      "root": "libs/react-xterm",
+      "sourceRoot": "libs/react-xterm/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/react-xterm",
+            "tsConfig": "libs/react-xterm/tsconfig.lib.json",
+            "project": "libs/react-xterm/package.json",
+            "entryFile": "libs/react-xterm/src/index.ts",
+            "external": ["react/jsx-runtime"],
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "libs/react-xterm/README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/react-xterm/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/react-xterm"],
+          "options": {
+            "jestConfig": "libs/react-xterm/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "terminal": {
       "root": "apps/terminal",
       "sourceRoot": "apps/terminal/src",

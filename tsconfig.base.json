@@ -16,7 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@electron-os-monorepo/style": ["libs/utils/src/lib/style/src/index.ts"],
-      "@electron-os-monorepo/utils": ["libs/utils/src/index.ts"]
+      "@electron-os-monorepo/terminal": ["libs/libterminal/src/index.ts"],
+      "@electron-os-monorepo/utils": ["libs/utils/src/index.ts"],
+      "@moraj/react-xterm": ["libs/react-xterm/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
