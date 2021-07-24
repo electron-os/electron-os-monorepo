@@ -33,6 +33,12 @@
     "terminal-e2e": {
       "tags": [],
       "implicitDependencies": ["terminal"]
+    },
+    "utils": {
+      "tags": []
+    },
+    "utils-src-lib-style": {
+      "tags": []
     }
   }
 }

@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@electron-os-monorepo/style": ["libs/utils/src/lib/style/src/index.ts"],
+      "@electron-os-monorepo/utils": ["libs/utils/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
