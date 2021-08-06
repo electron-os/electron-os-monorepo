@@ -14,7 +14,13 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
       }
     }
   },
@@ -36,6 +42,10 @@
     },
     "themes-mac-os-theme": {
       "tags": []
+    },
+    "themes-mac-os-theme-e2e": {
+      "tags": [],
+      "implicitDependencies": ["themes-mac-os-theme"]
     },
     "themes-mac-os-theme-src-lib-button": {
       "tags": []
