@@ -11,14 +11,6 @@ const Template: Story<IWindowProps> = (args) => <Window {...args} />;
 export const Primary = Template.bind({});
 
 Primary.args = {
-  title: 'Example window',
-  children: (
-    <div>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur
-      aliquid odio sapiente velit dolore est iusto corrupti? Nam et corporis
-      architecto quo, culpa consequuntur provident sunt obcaecati dolores illo
-      deleniti?
-    </div>
-  ),
+  title: 'Example title',
   url: 'https://moraj.ir',
 };
