@@ -49,6 +49,9 @@
     },
     "themes-mac-os-theme-src-lib-button": {
       "tags": []
+    },
+    "themes-mac-os-theme-src-lib-window": {
+      "tags": []
     }
   }
 }

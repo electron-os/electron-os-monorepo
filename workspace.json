@@ -243,6 +243,48 @@
           }
         }
       }
+    },
+    "themes-mac-os-theme-src-lib-window": {
+      "root": "libs/themes/mac-os-theme/src/lib/window",
+      "sourceRoot": "libs/themes/mac-os-theme/src/lib/window/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/themes/mac-os-theme/src/lib/window",
+            "tsConfig": "libs/themes/mac-os-theme/src/lib/window/tsconfig.lib.json",
+            "project": "libs/themes/mac-os-theme/src/lib/window/package.json",
+            "entryFile": "libs/themes/mac-os-theme/src/lib/window/src/index.ts",
+            "external": ["react/jsx-runtime"],
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "libs/themes/mac-os-theme/src/lib/window/README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/themes/mac-os-theme/src/lib/window/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/themes/mac-os-theme/src/lib/window"],
+          "options": {
+            "jestConfig": "libs/themes/mac-os-theme/src/lib/window/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

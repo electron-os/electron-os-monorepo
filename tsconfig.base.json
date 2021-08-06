@@ -18,6 +18,9 @@
       "@electronos/mac-os-theme": ["libs/themes/mac-os-theme/src/index.ts"],
       "@electronos/mac-os-theme-button": [
         "libs/themes/mac-os-theme/src/lib/button/src/index.ts"
+      ],
+      "@electronos/mac-os-theme-window": [
+        "libs/themes/mac-os-theme/src/lib/window/src/index.ts"
       ]
     }
   },
