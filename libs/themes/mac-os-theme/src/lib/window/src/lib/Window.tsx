@@ -1,5 +1,8 @@
-import React, { FunctionComponent, createElement } from 'react';
-import * as ReactDesktop from 'react-desktop/macOs';
+import { FunctionComponent, createElement } from 'react';
+import {
+  TitleBar as RDTitleBar,
+  Window as RDWindow,
+} from 'react-desktop/macOs';
 import { Rnd } from 'react-rnd';
 import { Style } from './Window.styles';
 import type { IWindowProps } from './Window.types';
@@ -42,19 +45,13 @@ export const Window: FunctionComponent<IWindowProps> = ({
       minHeight={`${minHeight ?? defaultProps.minHeight}px`}
       minWidth={`${minWidth ?? defaultProps.minWidth}px`}
     >
-      <ReactDesktop.Window
-        {...window}
-        {...rest}
-        width="100%"
-        height="100%"
-        chrome
-      >
-        <ReactDesktop.TitleBar title={title} controls />
+      <RDWindow {...window} {...rest} width="100%" height="100%" chrome>
+        <RDTitleBar title={title} controls />
         {createElement(contentObject.element, {
           ...contentObject.properties,
           ...content,
         })}
-      </ReactDesktop.Window>
+      </RDWindow>
     </Rnd>
   );
 };

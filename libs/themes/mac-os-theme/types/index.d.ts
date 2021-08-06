@@ -1,1 +1,1 @@
-declare module 'react-desktop/*';
+declare module 'react-desktop/macOs';
