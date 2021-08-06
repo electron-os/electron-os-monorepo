@@ -1,5 +1,5 @@
 {
-  "npmScope": "electron-os-monorepo",
+  "npmScope": "electronos",
   "affected": {
     "defaultBase": "master"
   },
@@ -33,6 +33,12 @@
     "terminal-e2e": {
       "tags": [],
       "implicitDependencies": ["terminal"]
+    },
+    "themes-mac-os-theme": {
+      "tags": []
+    },
+    "themes-mac-os-theme-src-lib-button": {
+      "tags": []
     }
   }
 }

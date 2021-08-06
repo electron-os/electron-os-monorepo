@@ -102,6 +102,90 @@
           }
         }
       }
+    },
+    "themes-mac-os-theme": {
+      "root": "libs/themes/mac-os-theme",
+      "sourceRoot": "libs/themes/mac-os-theme/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/themes/mac-os-theme",
+            "tsConfig": "libs/themes/mac-os-theme/tsconfig.lib.json",
+            "project": "libs/themes/mac-os-theme/package.json",
+            "entryFile": "libs/themes/mac-os-theme/src/index.ts",
+            "external": ["react/jsx-runtime"],
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "libs/themes/mac-os-theme/README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/themes/mac-os-theme/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/themes/mac-os-theme"],
+          "options": {
+            "jestConfig": "libs/themes/mac-os-theme/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "themes-mac-os-theme-src-lib-button": {
+      "root": "libs/themes/mac-os-theme/src/lib/button",
+      "sourceRoot": "libs/themes/mac-os-theme/src/lib/button/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/themes/mac-os-theme/src/lib/button",
+            "tsConfig": "libs/themes/mac-os-theme/src/lib/button/tsconfig.lib.json",
+            "project": "libs/themes/mac-os-theme/src/lib/button/package.json",
+            "entryFile": "libs/themes/mac-os-theme/src/lib/button/src/index.ts",
+            "external": ["react/jsx-runtime"],
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "libs/themes/mac-os-theme/src/lib/button/README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/themes/mac-os-theme/src/lib/button/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/themes/mac-os-theme/src/lib/button"],
+          "options": {
+            "jestConfig": "libs/themes/mac-os-theme/src/lib/button/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
