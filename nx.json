@@ -33,6 +33,13 @@
     ]
   },
   "projects": {
+    "desktops-mac-os-desktop": {
+      "tags": []
+    },
+    "desktops-mac-os-desktop-e2e": {
+      "tags": [],
+      "implicitDependencies": ["desktops-mac-os-desktop"]
+    },
     "terminal": {
       "tags": []
     },

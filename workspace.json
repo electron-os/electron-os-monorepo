@@ -1,6 +1,112 @@
 {
   "version": 2,
   "projects": {
+    "desktops-mac-os-desktop": {
+      "root": "apps/desktops/mac-os-desktop",
+      "sourceRoot": "apps/desktops/mac-os-desktop/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/desktops/mac-os-desktop",
+            "index": "apps/desktops/mac-os-desktop/src/index.html",
+            "main": "apps/desktops/mac-os-desktop/src/main.tsx",
+            "polyfills": "apps/desktops/mac-os-desktop/src/polyfills.ts",
+            "tsConfig": "apps/desktops/mac-os-desktop/tsconfig.app.json",
+            "assets": [
+              "apps/desktops/mac-os-desktop/src/favicon.ico",
+              "apps/desktops/mac-os-desktop/src/assets"
+            ],
+            "styles": ["apps/desktops/mac-os-desktop/src/styles.scss"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/desktops/mac-os-desktop/src/environments/environment.ts",
+                  "with": "apps/desktops/mac-os-desktop/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "desktops-mac-os-desktop:build",
+            "hmr": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "desktops-mac-os-desktop:build:production",
+              "hmr": false
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/desktops/mac-os-desktop/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/desktops/mac-os-desktop"],
+          "options": {
+            "jestConfig": "apps/desktops/mac-os-desktop/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "desktops-mac-os-desktop-e2e": {
+      "root": "apps/desktops/mac-os-desktop-e2e",
+      "sourceRoot": "apps/desktops/mac-os-desktop-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/desktops/mac-os-desktop-e2e/cypress.json",
+            "tsConfig": "apps/desktops/mac-os-desktop-e2e/tsconfig.e2e.json",
+            "devServerTarget": "desktops-mac-os-desktop:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "desktops-mac-os-desktop:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/desktops/mac-os-desktop-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
     "terminal": {
       "root": "apps/terminal",
       "sourceRoot": "apps/terminal/src",
