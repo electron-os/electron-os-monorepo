@@ -6,11 +6,25 @@ export const Background: FunctionComponent<IBackgroundProps> = ({
   image,
   color,
   repeat,
+  size,
   ...rest
 }) => {
-  const { root } = Style({ image, color, repeat });
+  const styles = Style({ image, color, repeat, size });
 
-  return <div {...rest} {...root} />;
+  return (
+    <div
+      {...rest}
+      {...Object.assign({}, styles.root, styles.absolute, styles.select)}
+    >
+      {size === 'stretch' ? (
+        <img
+          src={image}
+          alt={image}
+          {...Object.assign({}, styles.image, styles.absolute, styles.select)}
+        />
+      ) : null}
+    </div>
+  );
 };
 
 export default Background;

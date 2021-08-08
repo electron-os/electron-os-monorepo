@@ -5,7 +5,7 @@ export interface IBackgroundProps extends HTMLAttributes<HTMLDivElement> {
   image?: string;
   color?: string;
   repeat?: boolean;
-  size?: 'fill' | 'contain';
+  size?: 'fill' | 'original' | 'stretch';
 }
 
 // eslint-disable-next-line

@@ -4,14 +4,10 @@ import { Styles } from './Button.styles';
 import type { IButtonProps } from './Button.types';
 import './button.module.scss';
 
-export const Button: FunctionComponent<IButtonProps> = ({ ...rest }) => {
+export const Button: FunctionComponent<IButtonProps> = ({ text, ...rest }) => {
   const { root } = Styles({});
 
-  return (
-    <RDButton {...root} {...rest} color="blue">
-      Example button
-    </RDButton>
-  );
+  return <RDButton {...root} {...rest} color="blue" children={text} />;
 };
 
 export default Button;

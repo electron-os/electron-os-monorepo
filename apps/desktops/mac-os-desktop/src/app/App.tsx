@@ -9,7 +9,7 @@ export const App: FunctionComponent<IAppProps> = ({ ...rest }) => {
 
   return (
     <Fragment>
-      <Background image="https://picsum.photos/200" repeat />
+      <Background image="https://picsum.photos/200" size="original" />
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
         quam id adipisci enim ex magnam nam. Eveniet reprehenderit veritatis,

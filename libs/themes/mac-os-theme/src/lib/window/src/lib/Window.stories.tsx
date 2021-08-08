@@ -3,7 +3,7 @@ import { Window, IWindowProps } from '.';
 
 export default {
   component: Window,
-  title: 'Window',
+  title: 'Components/Window',
 } as Meta;
 
 const Template: Story<IWindowProps> = (args) => <Window {...args} />;
