@@ -1,6 +1,5 @@
 import type { HTMLAttributes } from 'react';
 
-// eslint-disable-next-line
 export interface IBackgroundProps extends HTMLAttributes<HTMLDivElement> {
   image?: string;
   color?: string;
@@ -8,7 +7,6 @@ export interface IBackgroundProps extends HTMLAttributes<HTMLDivElement> {
   size?: 'fill' | 'original' | 'stretch';
 }
 
-// eslint-disable-next-line
 export interface IBackgroundStyleProps {
   image?: IBackgroundProps['image'];
   color?: IBackgroundProps['color'];
