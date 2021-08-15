@@ -6,6 +6,9 @@ export interface IWindowProps extends HTMLAttributes<HTMLDivElement> {
   url?: string;
   minWidth?: number;
   minHeight?: number;
+  onClose?: () => void;
+  onMinimize?: () => void;
+  onMaximize?: () => void;
 }
 
 // eslint-disable-next-line

@@ -28,6 +28,9 @@ export const Style = ({
     select: style({
       WebkitUserDrag: 'none',
     }),
+    zIndex: style({
+      zIndex: 0,
+    }),
   };
 };
 

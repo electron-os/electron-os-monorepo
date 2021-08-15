@@ -1,5 +1,6 @@
 import { FunctionComponent, Fragment } from 'react';
 import { Background } from '../components';
+import { Window } from '@electronos/mac-os-theme';
 import { Style } from './App.styles';
 import type { IAppProps } from './App.types';
 import './app.module.scss';
@@ -16,6 +17,7 @@ export const App: FunctionComponent<IAppProps> = ({ ...rest }) => {
         excepturi dicta consequatur aspernatur eaque dolorem quas, laborum
         eligendi minus obcaecati?
       </p>
+      <Window title="Example window" url="https://moraj.ir" />
     </Fragment>
   );
 };

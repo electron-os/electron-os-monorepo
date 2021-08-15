@@ -14,13 +14,25 @@ export const Background: FunctionComponent<IBackgroundProps> = ({
   return (
     <div
       {...rest}
-      {...Object.assign({}, styles.root, styles.absolute, styles.select)}
+      {...Object.assign(
+        {},
+        styles.root,
+        styles.absolute,
+        styles.select,
+        styles.zIndex
+      )}
     >
       {size === 'stretch' ? (
         <img
           src={image}
           alt={image}
-          {...Object.assign({}, styles.image, styles.absolute, styles.select)}
+          {...Object.assign(
+            {},
+            styles.image,
+            styles.absolute,
+            styles.select,
+            styles.zIndex
+          )}
         />
       ) : null}
     </div>

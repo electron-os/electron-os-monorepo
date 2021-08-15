@@ -1,4 +1,4 @@
-import { FunctionComponent, createElement } from 'react';
+import { FunctionComponent, createElement, useState } from 'react';
 import {
   TitleBar as RDTitleBar,
   Window as RDWindow,
@@ -20,10 +20,14 @@ export const Window: FunctionComponent<IWindowProps> = ({
   children,
   minHeight,
   minWidth,
+  onClose,
+  onMinimize,
+  onMaximize,
   ...rest
 }) => {
   children = children ?? defaultProps.children;
-  const { root, window, content } = Style({});
+  const { root, absolute, content } = Style({});
+  const [draggableFrameStyle, setDraggableFrameStyle] = useState(root);
   const contentObject = url
     ? {
         element: 'iframe',
@@ -39,17 +43,46 @@ export const Window: FunctionComponent<IWindowProps> = ({
         },
       };
 
+  const onCloseHandler = (customHandler?: IWindowProps['onClose']) => () => {
+    if (customHandler) {
+      customHandler();
+    }
+  };
+
+  const onMinimizeHandler =
+    (customHandler?: IWindowProps['onMinimize']) => () => {
+      if (customHandler) {
+        customHandler();
+      }
+    };
+
+  const onMaximizeHandler =
+    (customHandler?: IWindowProps['onMaximize']) => () => {
+      setDraggableFrameStyle({ ...root, ...absolute });
+
+      if (customHandler) {
+        customHandler();
+      }
+    };
+
   return (
     <Rnd
-      {...root}
+      {...draggableFrameStyle}
       minHeight={`${minHeight ?? defaultProps.minHeight}px`}
       minWidth={`${minWidth ?? defaultProps.minWidth}px`}
     >
-      <RDWindow {...window} {...rest} width="100%" height="100%" chrome>
-        <RDTitleBar title={title} controls />
+      <RDWindow {...absolute} {...rest} width="100%" height="100%" chrome>
+        <RDTitleBar
+          title={title}
+          controls
+          onCloseClick={onCloseHandler(onClose)}
+          onMinimizeClick={onMinimizeHandler(onMinimize)}
+          onResizeClick={onMaximizeHandler(onMaximize)}
+        />
         {createElement(contentObject.element, {
           ...contentObject.properties,
           ...content,
+          ...absolute,
         })}
       </RDWindow>
     </Rnd>
