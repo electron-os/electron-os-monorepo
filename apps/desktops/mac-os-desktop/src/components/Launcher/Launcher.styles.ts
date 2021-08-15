@@ -8,13 +8,17 @@ export const Styles = ({ icon }: ILauncherStyleProps) => {
       position: 'relative',
       width: '50px',
       height: '50px',
-      background: 'red',
+      '&:hover': {
+        background: 'rgba(255,255,255,0.2)',
+      },
       '&:before': {
         content: '""',
         position: 'absolute',
         inset: '5px',
         backgroundImage: `url(${icon})`,
-        borderRadius: '5px',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
       },
     }),
   };

@@ -11,9 +11,12 @@ export const TaskBar: FunctionComponent<ITaskBarProps> = ({ ...rest }) => {
       {Array(5)
         .fill(0)
         .map((_value, key) => (
-          <Launcher icon="https://picsum.photos/50" key={key} />
+          <Launcher
+            icon="https://img.icons8.com/fluency/48/000000/folder-invoices--v1.png"
+            key={key}
+          />
         ))}
-      <Launcher icon="https://picsum.photos/50" />
+      <Launcher icon="https://img.icons8.com/fluency/48/000000/folder-invoices--v1.png" />
     </div>
   );
 };
