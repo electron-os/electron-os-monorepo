@@ -1,7 +1,6 @@
-import type { HTMLAttributes } from 'react';
-
-export interface ILauncherProps extends HTMLAttributes<HTMLDivElement> {
+export interface ILauncherProps {
   icon: string;
+  onClick?: () => void;
 }
 
 export interface ILauncherStyleProps {

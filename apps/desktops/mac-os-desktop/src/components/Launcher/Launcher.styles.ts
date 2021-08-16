@@ -11,6 +11,11 @@ export const Styles = ({ icon }: ILauncherStyleProps) => {
       '&:hover': {
         background: 'rgba(255,255,255,0.2)',
       },
+      '&:active': {
+        '&:before': {
+          transform: 'scale(0.9)',
+        },
+      },
       '&:before': {
         content: '""',
         position: 'absolute',
@@ -19,6 +24,7 @@ export const Styles = ({ icon }: ILauncherStyleProps) => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        transition: 'all 0.1s ease-in-out',
       },
     }),
   };

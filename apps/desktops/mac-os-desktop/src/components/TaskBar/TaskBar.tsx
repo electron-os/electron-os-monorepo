@@ -16,7 +16,12 @@ export const TaskBar: FunctionComponent<ITaskBarProps> = ({ ...rest }) => {
             key={key}
           />
         ))}
-      <Launcher icon="https://img.icons8.com/fluency/48/000000/folder-invoices--v1.png" />
+      <Launcher
+        icon="https://img.icons8.com/fluency/48/000000/folder-invoices--v1.png"
+        onClick={() => {
+          console.log('Clicked !');
+        }}
+      />
     </div>
   );
 };
