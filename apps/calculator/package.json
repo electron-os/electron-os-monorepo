@@ -1,0 +1,8 @@
+{
+  "name": "calculator",
+  "version": "0.0.1",
+  "desktop--info": {
+    "name": "Calculator",
+    "icon": "https://img.icons8.com/color/48/000000/calculator--v1.png"
+  }
+}

@@ -33,6 +33,13 @@
     ]
   },
   "projects": {
+    "calculator": {
+      "tags": []
+    },
+    "calculator-e2e": {
+      "tags": [],
+      "implicitDependencies": ["calculator"]
+    },
     "desktops-mac-os-desktop": {
       "tags": []
     },
