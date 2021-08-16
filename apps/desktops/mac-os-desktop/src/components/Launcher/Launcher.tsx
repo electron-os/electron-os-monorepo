@@ -1,20 +1,11 @@
 import { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import { AppStatusIndicator } from '..';
+import { bootstrap } from '../../api';
 import { Styles } from './Launcher.styles';
 import type { ILauncherProps } from './Launcher.types';
 
 export class Launcher extends Component<ILauncherProps> {
-  customOnClickHandler: ILauncherProps['onClick'];
-
-  constructor(props: ILauncherProps) {
-    super(props);
-
-    console.log(this.props);
-
-    this.customOnClickHandler = this.props.onClick;
-  }
-
   componentDidMount() {
     findDOMNode(this)?.addEventListener('click', this.onClickHandler);
   }
@@ -24,13 +15,15 @@ export class Launcher extends Component<ILauncherProps> {
   }
 
   onClickHandler = () => {
-    if (this.customOnClickHandler) {
-      this.customOnClickHandler();
+    bootstrap({ info: this.props.info });
+
+    if (this.props.onClick) {
+      this.props.onClick();
     }
   };
 
   render() {
-    const { root } = Styles({ icon: this.props.icon });
+    const { root } = Styles({ icon: this.props.info.icon });
 
     return (
       <div {...root}>

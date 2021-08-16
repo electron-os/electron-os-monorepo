@@ -47,6 +47,9 @@
       "tags": [],
       "implicitDependencies": ["desktops-mac-os-desktop"]
     },
+    "libbootstraper": {
+      "tags": []
+    },
     "terminal": {
       "tags": []
     },
@@ -65,6 +68,9 @@
       "tags": []
     },
     "themes-mac-os-theme-src-lib-window": {
+      "tags": []
+    },
+    "types": {
       "tags": []
     }
   }

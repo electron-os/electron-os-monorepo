@@ -12,16 +12,13 @@ export const TaskBar: FunctionComponent<ITaskBarProps> = ({ ...rest }) => {
         .fill(0)
         .map((_value, key) => (
           <Launcher
-            icon="https://img.icons8.com/fluency/48/000000/folder-invoices--v1.png"
+            info={{
+              icon: 'https://img.icons8.com/fluency/48/000000/folder-invoices--v1.png',
+              name: 'Calculator',
+            }}
             key={key}
           />
         ))}
-      <Launcher
-        icon="https://img.icons8.com/fluency/48/000000/folder-invoices--v1.png"
-        onClick={() => {
-          console.log('Clicked !');
-        }}
-      />
     </div>
   );
 };

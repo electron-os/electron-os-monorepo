@@ -1,8 +1,10 @@
+import type { ILauncherInfoProps } from '../../types';
+
 export interface ILauncherProps {
-  icon: string;
+  info: ILauncherInfoProps;
   onClick?: () => void;
 }
 
 export interface ILauncherStyleProps {
-  icon: ILauncherProps['icon'];
+  icon: ILauncherInfoProps['icon'];
 }

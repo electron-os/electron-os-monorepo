@@ -209,6 +209,38 @@
         }
       }
     },
+    "libbootstraper": {
+      "root": "libs/libbootstraper",
+      "sourceRoot": "libs/libbootstraper/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/libbootstraper/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/libbootstraper"],
+          "options": {
+            "jestConfig": "libs/libbootstraper/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/libbootstraper",
+            "tsConfig": "libs/libbootstraper/tsconfig.lib.json",
+            "packageJson": "libs/libbootstraper/package.json",
+            "main": "libs/libbootstraper/src/index.ts",
+            "assets": ["libs/libbootstraper/*.md"]
+          }
+        }
+      }
+    },
     "terminal": {
       "root": "apps/terminal",
       "sourceRoot": "apps/terminal/src",
@@ -490,6 +522,38 @@
           "options": {
             "jestConfig": "libs/themes/mac-os-theme/src/lib/window/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "types": {
+      "root": "libs/types",
+      "sourceRoot": "libs/types/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/types/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/types"],
+          "options": {
+            "jestConfig": "libs/types/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/types",
+            "tsConfig": "libs/types/tsconfig.lib.json",
+            "packageJson": "libs/types/package.json",
+            "main": "libs/types/src/index.ts",
+            "assets": ["libs/types/*.md"]
           }
         }
       }

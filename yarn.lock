@@ -1811,6 +1811,17 @@
     yargs "15.4.1"
     yargs-parser "20.0.0"
 
+"@nrwl/cli@12.7.1":
+  version "12.7.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/cli/-/cli-12.7.1.tgz#cd781731c0396975ce44edb6c80b8fccbba4b23e"
+  integrity sha512-Rjv9Pwv2Bdgztkr0GnKuE/W7DmSTQI/bvdtKOqcOJIsL4i5xJCZDxVDbhmfPoa4NXPIYHeW3EqfFAP4PH1rCKg==
+  dependencies:
+    "@nrwl/tao" "12.7.1"
+    chalk "4.1.0"
+    v8-compile-cache "2.3.0"
+    yargs "15.4.1"
+    yargs-parser "20.0.0"
+
 "@nrwl/cypress@12.6.2":
   version "12.6.2"
   resolved "https://registry.yarnpkg.com/@nrwl/cypress/-/cypress-12.6.2.tgz#8179f97fb4f089e0444e0455590e1eac6457c0b9"
@@ -1836,6 +1847,18 @@
   integrity sha512-5Nz2XH2IYZlaNo53NwzqbrjJk01rh9T++TC4BFXZJtb4Likj/y/5noC4Mv+6v3t/mrdIK38PbJTTLqRYwtwn8A==
   dependencies:
     "@nrwl/tao" "12.6.2"
+    ejs "^3.1.5"
+    ignore "^5.0.4"
+    rxjs "^6.5.4"
+    semver "7.3.4"
+    tslib "^2.0.0"
+
+"@nrwl/devkit@12.7.1":
+  version "12.7.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-12.7.1.tgz#aea0d8db1663fed44b5189452beae87bf432c60f"
+  integrity sha512-g88SWsXbiZDvL+4PWCBFlhzsg0niEJCxGDJ1EV+dLexAM3iD1aBn3EK2ygaF1sgabBNlJnUgbpU14/N5SexZuA==
+  dependencies:
+    "@nrwl/tao" "12.7.1"
     ejs "^3.1.5"
     ignore "^5.0.4"
     rxjs "^6.5.4"
@@ -1868,6 +1891,22 @@
     rxjs "^6.5.4"
     tslib "^2.0.0"
 
+"@nrwl/jest@12.7.1":
+  version "12.7.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/jest/-/jest-12.7.1.tgz#1f90c3d032c10e7e5afd736bf74c328002350449"
+  integrity sha512-+Pg9UimjoDWAJUH2SLqHcdn+6gLvzB6uISDqh4tvzyixiHSUNcY/WMqP1X9qVFfFA4HMwr8YvA7RUFHbSCrcxA==
+  dependencies:
+    "@jest/reporters" "27.0.6"
+    "@jest/test-result" "27.0.6"
+    "@nrwl/devkit" "12.7.1"
+    chalk "4.1.0"
+    identity-obj-proxy "3.0.0"
+    jest-config "27.0.6"
+    jest-resolve "27.0.6"
+    jest-util "27.0.6"
+    rxjs "^6.5.4"
+    tslib "^2.0.0"
+
 "@nrwl/linter@12.6.2":
   version "12.6.2"
   resolved "https://registry.yarnpkg.com/@nrwl/linter/-/linter-12.6.2.tgz#989fb7f031a1b77617bca6ea505a423d1b82a5e0"
@@ -1878,6 +1917,44 @@
     minimatch "3.0.4"
     tmp "~0.2.1"
     tslib "^2.0.0"
+
+"@nrwl/linter@12.7.1":
+  version "12.7.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/linter/-/linter-12.7.1.tgz#c5ccd17ade2b3d3f6410d18a4fd0ce8b2d3e5111"
+  integrity sha512-FUPaUhqDcXUjRW3hKYnkQ9c569TGr+zS3YDoNKSbOFBrr6MCRRPIJMRo6bDS38aMMIpOZ4tSwuvxuoVfOfW1Fg==
+  dependencies:
+    "@nrwl/devkit" "12.7.1"
+    glob "7.1.4"
+    minimatch "3.0.4"
+    tmp "~0.2.1"
+    tslib "^2.0.0"
+
+"@nrwl/node@^12.7.1":
+  version "12.7.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-12.7.1.tgz#3a7bd35b518558b948cd5097a6ab32af71f3adda"
+  integrity sha512-tkEr9yndLvZaZzZ2WMyBXmA8bluIGzcFKkV+TISO8LoML9e/oqiaN6H09kOt2Z0LUDvsuy5Uyo0XvYVyRSteLw==
+  dependencies:
+    "@nrwl/devkit" "12.7.1"
+    "@nrwl/jest" "12.7.1"
+    "@nrwl/linter" "12.7.1"
+    "@nrwl/workspace" "12.7.1"
+    chalk "4.1.0"
+    circular-dependency-plugin "5.2.0"
+    copy-webpack-plugin "6.4.1"
+    fork-ts-checker-webpack-plugin "6.2.10"
+    fs-extra "^9.1.0"
+    glob "7.1.4"
+    license-webpack-plugin "2.3.15"
+    rxjs "^6.5.4"
+    rxjs-for-await "0.0.2"
+    source-map-support "0.5.19"
+    tree-kill "1.2.2"
+    ts-loader "5.4.5"
+    tsconfig-paths-webpack-plugin "3.4.1"
+    tslib "^2.0.0"
+    webpack "4.46.0"
+    webpack-merge "4.2.1"
+    webpack-node-externals "1.7.2"
 
 "@nrwl/react@12.6.2":
   version "12.6.2"
@@ -1921,6 +1998,22 @@
   version "12.6.2"
   resolved "https://registry.yarnpkg.com/@nrwl/tao/-/tao-12.6.2.tgz#14629c82b60d420237f03d0fc6e8457cf75220ec"
   integrity sha512-4w24g4Wv0+5E7cgfYQkNLJbOu0qIIcNpySuDGylzbrlFs+mj/qWIL9XiMHpZnO6P62MpH+9tWB1/BbCD+UQ/rg==
+  dependencies:
+    chalk "4.1.0"
+    enquirer "~2.3.6"
+    fs-extra "^9.1.0"
+    jsonc-parser "3.0.0"
+    rxjs "^6.5.4"
+    rxjs-for-await "0.0.2"
+    semver "7.3.4"
+    tmp "~0.2.1"
+    tslib "^2.0.0"
+    yargs-parser "20.0.0"
+
+"@nrwl/tao@12.7.1":
+  version "12.7.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/tao/-/tao-12.7.1.tgz#467b5b56f8e503d4a6acbd6eecd4ad51042d8d27"
+  integrity sha512-cQvrFwA+mEAiY3HwIuTjsO/yxgGEoffdUcsH6Oak3dcypkmTf4mVxqmuyzvJ5smt8cggg8qb7BEWowWs31folw==
   dependencies:
     chalk "4.1.0"
     enquirer "~2.3.6"
@@ -2032,6 +2125,34 @@
     chokidar "^3.5.1"
     cosmiconfig "^4.0.0"
     dotenv "8.2.0"
+    enquirer "~2.3.6"
+    flat "^5.0.2"
+    fs-extra "^9.1.0"
+    glob "7.1.4"
+    ignore "^5.0.4"
+    minimatch "3.0.4"
+    npm-run-all "^4.1.5"
+    open "^7.4.2"
+    rxjs "^6.5.4"
+    semver "7.3.4"
+    tmp "~0.2.1"
+    tslib "^2.0.0"
+    yargs "15.4.1"
+    yargs-parser "20.0.0"
+
+"@nrwl/workspace@12.7.1":
+  version "12.7.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/workspace/-/workspace-12.7.1.tgz#b140311473a2a45776674665bffb5eb001ce3465"
+  integrity sha512-84XRqtRc4pfO8agQqEX984w5HUyN+xWhz3EZv88w8QQfHdIooARj8wRb2lyKu7wHdaKaYNzx0pG9LLuVQYq6GQ==
+  dependencies:
+    "@nrwl/cli" "12.7.1"
+    "@nrwl/devkit" "12.7.1"
+    "@nrwl/jest" "12.7.1"
+    "@nrwl/linter" "12.7.1"
+    chalk "4.1.0"
+    chokidar "^3.5.1"
+    cosmiconfig "^4.0.0"
+    dotenv "~10.0.0"
     enquirer "~2.3.6"
     flat "^5.0.2"
     fs-extra "^9.1.0"
@@ -6298,6 +6419,11 @@ dotenv@^8.0.0:
   version "8.6.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.6.0.tgz#061af664d19f7f4d8fc6e4ff9b584ce237adcb8b"
   integrity sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==
+
+dotenv@~10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
+  integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
 
 downshift@^6.0.15:
   version "6.1.6"
@@ -13698,7 +13824,7 @@ source-map-resolve@^0.5.0:
     source-map-url "^0.4.0"
     urix "^0.1.0"
 
-source-map-support@^0.5.16, source-map-support@^0.5.17, source-map-support@^0.5.6, source-map-support@~0.5.12, source-map-support@~0.5.19:
+source-map-support@0.5.19, source-map-support@^0.5.16, source-map-support@^0.5.17, source-map-support@^0.5.6, source-map-support@~0.5.12, source-map-support@~0.5.19:
   version "0.5.19"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.19.tgz#a98b62f86dcaf4f67399648c085291ab9e8fed61"
   integrity sha512-Wonm7zOCIJzBGQdB+thsPar0kYuCIzYvxZwlBa87yi/Mdjv7Tip2cyVbLj5o0cFPN4EVkuTwb3GDDyUx2DGnGw==
@@ -14511,6 +14637,11 @@ tr46@^2.1.0:
   integrity sha512-15Ih7phfcdP5YxqiB+iDtLoaTz4Nd35+IiAv0kQ5FNKHzXgdWqPoTIqEDDJmXceQt4JZk6lVPT8lnDlPpGDppw==
   dependencies:
     punycode "^2.1.1"
+
+tree-kill@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
+  integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
 trim-trailing-lines@^1.0.0:
   version "1.1.4"
